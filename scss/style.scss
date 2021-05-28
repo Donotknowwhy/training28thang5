@@ -1,0 +1,35 @@
+@use 'variables';
+@use 'mixin';
+@use 'extend';
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: variables.$color2;
+    min-height: 100vh;
+    
+}
+
+h3{
+    color: variables.$color1;
+    font-family: variables.$font_family_main;
+    font-size: variables.$font_size_title;
+}
+
+.box{
+    background: variables.$color3;
+    @include mixin.size(200px);
+}
+
+.success {
+    @extend .message-shared;
+    background-color: green;
+  }
+  
+  .error {
+    @extend .message-shared;
+    background-color: red;
+  }
