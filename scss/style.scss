@@ -1,35 +1,60 @@
+// @import 'variables';
+
 @use 'variables';
-@use 'mixin';
+// @use 'mixin';
 @use 'extend';
 
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: $color2;
+//   min-height: 100vh;
+// }
 
+// h3 {
+//   color: $color1;
+//   font-family: $font_family_main;
+//   font-size: $font_size_title;
+// }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: variables.$color2;
-    min-height: 100vh;
-    
+//nesting
+// .parent{
+//     .children{
+//         .children1{
+//             font-size: 128px;
+//         }
+//     }
+// }
+
+//modules
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: variables.$color2;
+  min-height: 100vh;
 }
 
-h3{
-    color: variables.$color1;
-    font-family: variables.$font_family_main;
-    font-size: variables.$font_size_title;
-}
+// h3{
+//     color: variables.$color1;
+//     font-family: variables.$font_family_main;
+//     font-size: variables.$font_size_title;
+// }
 
-.box{
-    background: variables.$color3;
-    @include mixin.size(200px);
-}
+//mixins
+// .box{
+//     background: variables.$color3;
+//     @include mixin.size(200px,600px);
+// }
 
+// extend
 .success {
-    @extend .message-shared;
-    background-color: green;
-  }
-  
-  .error {
-    @extend .message-shared;
-    background-color: red;
-  }
+  @extend .message-shared;
+  background-color: green;
+}
+
+.error {
+  @extend .message-shared;
+  background-color: red;
+}
